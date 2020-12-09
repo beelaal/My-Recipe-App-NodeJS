@@ -50,7 +50,6 @@ pids
 *.iml
 
 #config
-config/configJs.js
 .vscode
 mock/rest/*/*/*/mock/response.txt
 
