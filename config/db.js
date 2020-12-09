@@ -29,11 +29,11 @@ const start = async () => {
     model = db.import(modelPath, model);
     models[model.name] = model;
   })
-  const myRelationFiles = getFiles(path + '/relations');
-  await asyncForEach(myRelationFiles, async (modelPath) => {
-    let model = require(modelPath);
-    model = db.import(modelPath, model);
-  })
+  // const myRelationFiles = getFiles(path + '/relations');
+  // await asyncForEach(myRelationFiles, async (modelPath) => {
+  //   let model = require(modelPath);
+  //   model = db.import(modelPath, model);
+  // })
   global.models = models;
   Object.values(models).filter(m => m.associate).forEach(m => m.associate(models));
 }
